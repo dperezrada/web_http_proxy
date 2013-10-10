@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+	hola!
+<iframe src="" id="editor" width="100%" height="100%"></iframe>
+<script type="text/javascript">
+	var url = prompt("URL?");
+	$.ajax({
+	  url: '/reset_url',
+	  type: 'GET',
+	  success: function(data, textStatus, xhr) {
+	    document.getElementById("editor").src = url;
+	  }
+	});
+</script>
+</body>
+</html>
